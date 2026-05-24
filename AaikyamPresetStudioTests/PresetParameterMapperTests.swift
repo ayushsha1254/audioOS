@@ -120,4 +120,12 @@ final class PresetParameterMapperTests: XCTestCase {
         let p = PresetParameterMapper.parametersFromSliders(SimpleSliders(brightness: -0.5, warmth: 0.5, punch: 0.5, space: 0, echo: 0))
         XCTAssertEqual(p.eqHighGain, -2.0, accuracy: 0.001)
     }
+
+    func test_slidersFromParameters_outOfRangeParam_clampedToOne() {
+        // Supabase preset with out-of-range eq_high_gain (e.g. hand-edited) should not crash or exceed [0,1]
+        var params = PresetParameters()
+        params.eqHighGain = 20.0  // well above max of 6.0 dB
+        let s = PresetParameterMapper.slidersFromParameters(params)
+        XCTAssertEqual(s.brightness, 1.0, accuracy: 0.001)
+    }
 }

@@ -47,6 +47,7 @@ struct PresetParameterMapper {
             brightness: inverseLerp(params.eqHighGain,    from: -2.0, to: 6.0),
             warmth:     inverseLerp(params.eqLowGain,     from: 0.0,  to: 4.0),
             punch:      inverseLerp(params.compThreshold,  from: -6.0, to: -24.0),
+            // space: uses reverbMix (continuous) not reverbPreset (quantized by .rounded()) — avoids rounding loss in roundtrip
             space:      inverseLerp(params.reverbMix,      from: 0.0,  to: 0.5),
             echo:       inverseLerp(params.delayMix,       from: 0.0,  to: 0.3)
         )
@@ -63,22 +64,5 @@ struct PresetParameterMapper {
     static func inverseLerp(_ value: Float, from: Float, to: Float) -> Float {
         guard to != from else { return 0.0 }
         return ((value - from) / (to - from)).clamped01
-    }
-}
-
-// MARK: - Float clamping helpers
-
-extension Float {
-    /// Clamps the value to [0.0, 1.0].
-    var clamped01: Float { Swift.max(0.0, Swift.min(1.0, self)) }
-
-    func clamped(to r: ClosedRange<Float>) -> Float {
-        Swift.max(r.lowerBound, Swift.min(r.upperBound, self))
-    }
-}
-
-extension Int {
-    func clamped(to r: ClosedRange<Int>) -> Int {
-        Swift.max(r.lowerBound, Swift.min(r.upperBound, self))
     }
 }

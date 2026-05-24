@@ -17,6 +17,7 @@
 		B2C3D4E5F6A7B8C9D0E1F2A3 /* PresetModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F6A7B8C9D0E1F2A4 /* PresetModelTests.swift */; };
 		C3D4E5F6A7B8C9D0E1F2A3B4 /* PresetParameterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */; };
 		D4E5F6A7B8C9D0E1F2A3B4C5 /* PresetParameterMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */; };
+		E5F6A7B8C9D0E1F2A3B4C5D6 /* NumericExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */; };
 		E7D1C91635E6D6165D580AE4 /* AaikyamPresetStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1A90F711C41CDB2544C4B /* AaikyamPresetStudioApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +48,7 @@
 		C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapper.swift; sourceTree = "<group>"; };
 		D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapperTests.swift; sourceTree = "<group>"; };
 		BF398E225CC46BA20EFE2F0F /* AaikyamPresetStudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AaikyamPresetStudioTests.swift; sourceTree = "<group>"; };
-		E1B2C3D11C0742D2C7F02F08 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtensions.swift; sourceTree = "<group>"; };
 		E9D152CE890D8993059ECF6B /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +94,7 @@
 		5FD1D3CDB1E97C2E3AB21EE1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				E1B2C3D11C0742D2C7F02F08 /* .gitkeep */,
+				E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -262,6 +263,7 @@
 				E7D1C91635E6D6165D580AE4 /* AaikyamPresetStudioApp.swift in Sources */,
 				A1B2C3D4E5F6A7B8C9D0E1F2 /* PresetModel.swift in Sources */,
 				C3D4E5F6A7B8C9D0E1F2A3B4 /* PresetParameterMapper.swift in Sources */,
+				E5F6A7B8C9D0E1F2A3B4C5D6 /* NumericExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
