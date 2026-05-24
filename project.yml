@@ -1,0 +1,58 @@
+name: AaikyamPresetStudio
+options:
+  bundleIdPrefix: com.aaikyam
+  deploymentTarget:
+    iOS: "17.0"
+  defaultConfig: Debug
+  xcodeVersion: "16.0"
+
+packages:
+  Supabase:
+    url: https://github.com/supabase/supabase-swift
+    from: "2.0.0"
+
+targets:
+  AaikyamPresetStudio:
+    type: application
+    platform: iOS
+    sources:
+      - path: AaikyamPresetStudio
+        excludes:
+          - "**/.DS_Store"
+    resources:
+      - path: AaikyamPresetStudio/Fonts
+        buildPhase: resources
+    info:
+      path: AaikyamPresetStudio/Info.plist
+      properties:
+        CFBundleDisplayName: Aaikyam Preset Studio
+        NSMicrophoneUsageDescription: "Aaikyam needs your microphone to record a 15-second voice sample so you can hear how your preset will sound at the venue."
+        UIAppFonts:
+          - Syne-Bold.ttf
+          - DMSans-Regular.ttf
+          - DMSans-Medium.ttf
+          - JetBrainsMono-Regular.ttf
+        SUPABASE_URL: "$(SUPABASE_URL)"
+        SUPABASE_ANON_KEY: "$(SUPABASE_ANON_KEY)"
+        UILaunchScreen:
+          UIColorName: ""
+          UIImageName: ""
+    dependencies:
+      - package: Supabase
+        product: Supabase
+    settings:
+      base:
+        SWIFT_VERSION: "5.9"
+        IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+        SUPABASE_URL: "https://placeholder.supabase.co"
+        SUPABASE_ANON_KEY: "placeholder-key"
+
+  AaikyamPresetStudioTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: AaikyamPresetStudioTests
+    dependencies:
+      - target: AaikyamPresetStudio
+    settings:
+      base:
+        SWIFT_VERSION: "5.9"
