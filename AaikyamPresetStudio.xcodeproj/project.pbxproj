@@ -15,6 +15,8 @@
 		8CE8E0F92A69F1DCEAC23FF6 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5844F5748E38A2F3C66A7BF5 /* DMSans-Medium.ttf */; };
 		A1B2C3D4E5F6A7B8C9D0E1F2 /* PresetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F3 /* PresetModel.swift */; };
 		B2C3D4E5F6A7B8C9D0E1F2A3 /* PresetModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F6A7B8C9D0E1F2A4 /* PresetModelTests.swift */; };
+		C3D4E5F6A7B8C9D0E1F2A3B4 /* PresetParameterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */; };
+		D4E5F6A7B8C9D0E1F2A3B4C5 /* PresetParameterMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */; };
 		E7D1C91635E6D6165D580AE4 /* AaikyamPresetStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1A90F711C41CDB2544C4B /* AaikyamPresetStudioApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		9DE87E47F060620A42908005 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		A1B2C3D4E5F6A7B8C9D0E1F3 /* PresetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetModel.swift; sourceTree = "<group>"; };
 		B2C3D4E5F6A7B8C9D0E1F2A4 /* PresetModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetModelTests.swift; sourceTree = "<group>"; };
+		C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapper.swift; sourceTree = "<group>"; };
+		D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapperTests.swift; sourceTree = "<group>"; };
 		BF398E225CC46BA20EFE2F0F /* AaikyamPresetStudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AaikyamPresetStudioTests.swift; sourceTree = "<group>"; };
 		E1B2C3D11C0742D2C7F02F08 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		E9D152CE890D8993059ECF6B /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			children = (
 				BF398E225CC46BA20EFE2F0F /* AaikyamPresetStudioTests.swift */,
 				B2C3D4E5F6A7B8C9D0E1F2A4 /* PresetModelTests.swift */,
+				D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */,
 			);
 			path = AaikyamPresetStudioTests;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				7F8D3CF7B6C64EB77C2741C5 /* .gitkeep */,
+				C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			files = (
 				4C76AF512316F0A98C8395C7 /* AaikyamPresetStudioTests.swift in Sources */,
 				B2C3D4E5F6A7B8C9D0E1F2A3 /* PresetModelTests.swift in Sources */,
+				D4E5F6A7B8C9D0E1F2A3B4C5 /* PresetParameterMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +261,7 @@
 			files = (
 				E7D1C91635E6D6165D580AE4 /* AaikyamPresetStudioApp.swift in Sources */,
 				A1B2C3D4E5F6A7B8C9D0E1F2 /* PresetModel.swift in Sources */,
+				C3D4E5F6A7B8C9D0E1F2A3B4 /* PresetParameterMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
