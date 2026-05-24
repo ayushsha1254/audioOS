@@ -274,7 +274,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = AaikyamPresetStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aaikyam.AaikyamPresetStudio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaikyam.presetstudio;
 				SUPABASE_ANON_KEY = "placeholder-key";
 				SUPABASE_URL = "https://placeholder.supabase.co";
 				SWIFT_VERSION = 5.9;
@@ -294,7 +294,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = AaikyamPresetStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aaikyam.AaikyamPresetStudio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaikyam.presetstudio;
 				SUPABASE_ANON_KEY = "placeholder-key";
 				SUPABASE_URL = "https://placeholder.supabase.co";
 				SWIFT_VERSION = 5.9;

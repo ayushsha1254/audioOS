@@ -15,6 +15,7 @@ targets:
   AaikyamPresetStudio:
     type: application
     platform: iOS
+    bundleId: com.aaikyam.presetstudio
     sources:
       - path: AaikyamPresetStudio
         excludes:
