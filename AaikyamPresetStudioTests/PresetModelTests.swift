@@ -79,4 +79,11 @@ final class PresetModelTests: XCTestCase {
         XCTAssertEqual(preset.parameters.delayMix,     0.0, accuracy: 0.001)
         XCTAssertEqual(preset.parameters.compMakeup,   0.0, accuracy: 0.001)
     }
+
+    func test_staticPresets_areEquatable() {
+        // static let means same UUID every access — equality must hold
+        XCTAssertEqual(PresetModel.cafeSet, PresetModel.cafeSet)
+        XCTAssertEqual(PresetModel.raw, PresetModel.raw)
+        XCTAssertNotEqual(PresetModel.cafeSet, PresetModel.raw)
+    }
 }
