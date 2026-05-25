@@ -13,6 +13,7 @@ final class PresetStudioViewModel: ObservableObject {
     @Published var saveError:       String?
     @Published var showNamePrompt:  Bool = false
     @Published var presetName:      String = ""
+    @Published var didSave:         Bool = false
 
     // Forwarded from AudioEngineManager
     var engineState:      AudioEngineState { audio.state }
@@ -23,9 +24,10 @@ final class PresetStudioViewModel: ObservableObject {
 
     // MARK: - Dependencies
 
-    private let audio:     AudioEngineManager
-    private let service:   PresetRepository
-    private let artistId:  UUID
+    private let audio:        AudioEngineManager
+    private let service:      PresetRepository
+    private let artistId:     UUID
+    private let isNewPreset:  Bool
 
     // MARK: - Init
 
@@ -35,9 +37,10 @@ final class PresetStudioViewModel: ObservableObject {
         audio:     AudioEngineManager = .shared,
         service:   PresetRepository
     ) {
-        self.artistId = artistId
-        self.audio    = audio
-        self.service  = service
+        self.artistId    = artistId
+        self.audio       = audio
+        self.service     = service
+        self.isNewPreset = (preset == nil)
         let p = preset ?? {
             var blank = PresetModel.blank
             blank.artistId = artistId
@@ -111,7 +114,11 @@ final class PresetStudioViewModel: ObservableObject {
 
     /// Called by the Save button — shows name prompt if new, saves directly if editing.
     func initiateSave() {
-        showNamePrompt = true
+        if isNewPreset {
+            showNamePrompt = true
+        } else {
+            Task { await savePreset() }
+        }
     }
 
     /// Called when user confirms the name prompt.
@@ -126,10 +133,12 @@ final class PresetStudioViewModel: ObservableObject {
         do {
             let saved = try await service.save(preset)
             preset = saved
+            didSave = true
         } catch {
             do {
                 let saved = try await service.save(preset)
                 preset = saved
+                didSave = true
             } catch {
                 saveError = "Couldn't save: \(error.localizedDescription). Check your connection and try again."
             }

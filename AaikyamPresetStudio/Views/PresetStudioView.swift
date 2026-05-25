@@ -49,6 +49,9 @@ struct PresetStudioView: View {
         } message: {
             Text(vm.saveError ?? "")
         }
+        .onChange(of: vm.didSave) { saved in
+            if saved { dismiss() }
+        }
     }
 
     // MARK: - Navigation Header

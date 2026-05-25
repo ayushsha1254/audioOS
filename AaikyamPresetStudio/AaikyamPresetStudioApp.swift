@@ -3,8 +3,23 @@ import Supabase
 
 // MARK: - Supabase client (shared singleton)
 
+private func makeSupabaseURL() -> URL {
+    guard
+        let urlString = Bundle.main.object(forInfoDictionaryKey: "SUPABASE_URL") as? String,
+        !urlString.isEmpty,
+        !urlString.contains("placeholder"),
+        let url = URL(string: urlString)
+    else {
+        fatalError("""
+            SUPABASE_URL is missing or still set to a placeholder.
+            Copy Secrets.xcconfig.example → Secrets.xcconfig and fill in your real credentials.
+            """)
+    }
+    return url
+}
+
 let supabase = SupabaseClient(
-    supabaseURL: URL(string: Bundle.main.object(forInfoDictionaryKey: "SUPABASE_URL") as? String ?? "")!,
+    supabaseURL: makeSupabaseURL(),
     supabaseKey: Bundle.main.object(forInfoDictionaryKey: "SUPABASE_ANON_KEY") as? String ?? ""
 )
 
@@ -36,7 +51,7 @@ struct AaikyamPresetStudioApp: App {
                 // Restore session if already authenticated
                 // supabase.auth.currentSession is a synchronous computed property in SDK 2.x
                 if let session = try? await supabase.auth.session {
-                    artistId = UUID(uuidString: session.user.id.uuidString)
+                    artistId = session.user.id
                 }
             }
         }

@@ -91,7 +91,7 @@ struct LoginView: View {
         errorMessage = nil
         do {
             let session = try await supabase.auth.signIn(email: email, password: password)
-            onAuthenticated(UUID(uuidString: session.user.id.uuidString) ?? UUID())
+            onAuthenticated(session.user.id)
         } catch {
             errorMessage = error.localizedDescription
         }
