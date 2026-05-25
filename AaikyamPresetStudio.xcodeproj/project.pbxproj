@@ -25,6 +25,7 @@
 		PS001A2B3C4D5E6F7A8B9C0D1 /* PresetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PS001A2B3C4D5E6F7A8B9C0D2 /* PresetService.swift */; };
 		PT001A2B3C4D5E6F7A8B9C0D1 /* PresetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = PT001A2B3C4D5E6F7A8B9C0D2 /* PresetServiceTests.swift */; };
 		VM01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */; };
+		PV01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		XC001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		XE001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Secrets.xcconfig.example; sourceTree = "<group>"; };
 		VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStudioViewModel.swift; sourceTree = "<group>"; };
+		PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStudioView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				G7B8C9D0E1F2A3B4C5D6E7F8 /* WaveformView.swift */,
+				PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				G7B8C9D0E1F2A3B4C5D6E7F9 /* WaveformView.swift in Sources */,
 				PS001A2B3C4D5E6F7A8B9C0D1 /* PresetService.swift in Sources */,
 				VM01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioViewModel.swift in Sources */,
+				PV01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
