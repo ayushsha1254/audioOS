@@ -68,6 +68,16 @@ final class AudioEngineManager: ObservableObject {
 
     private init() {
         buildGraph()
+        registerInterruptionObserver()
+    }
+
+    private func registerInterruptionObserver() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleInterruption(_:)),
+            name: AVAudioSession.interruptionNotification,
+            object: AVAudioSession.sharedInstance()
+        )
     }
 
     // MARK: - AVAudioEngine Graph Construction
@@ -133,13 +143,6 @@ final class AudioEngineManager: ObservableObject {
             options: [.defaultToSpeaker, .allowBluetooth]
         )
         try session.setActive(true)
-
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(handleInterruption(_:)),
-            name: AVAudioSession.interruptionNotification,
-            object: session
-        )
     }
 
     @objc private nonisolated func handleInterruption(_ note: Notification) {
