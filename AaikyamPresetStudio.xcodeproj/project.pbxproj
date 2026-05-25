@@ -26,6 +26,8 @@
 		PT001A2B3C4D5E6F7A8B9C0D1 /* PresetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = PT001A2B3C4D5E6F7A8B9C0D2 /* PresetServiceTests.swift */; };
 		VM01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */; };
 		PV01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */; };
+		LV01A2B3C4D5E6F7A8B9C0D1 /* PresetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = LV01A2B3C4D5E6F7A8B9C0D2 /* PresetListViewModel.swift */; };
+		PL01A2B3C4D5E6F7A8B9C0D1 /* PresetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PL01A2B3C4D5E6F7A8B9C0D2 /* PresetListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		XE001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Secrets.xcconfig.example; sourceTree = "<group>"; };
 		VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStudioViewModel.swift; sourceTree = "<group>"; };
 		PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStudioView.swift; sourceTree = "<group>"; };
+		LV01A2B3C4D5E6F7A8B9C0D2 /* PresetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetListViewModel.swift; sourceTree = "<group>"; };
+		PL01A2B3C4D5E6F7A8B9C0D2 /* PresetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 			children = (
 				G7B8C9D0E1F2A3B4C5D6E7F8 /* WaveformView.swift */,
 				PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */,
+				PL01A2B3C4D5E6F7A8B9C0D2 /* PresetListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */,
+				LV01A2B3C4D5E6F7A8B9C0D2 /* PresetListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -288,6 +294,8 @@
 				PS001A2B3C4D5E6F7A8B9C0D1 /* PresetService.swift in Sources */,
 				VM01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioViewModel.swift in Sources */,
 				PV01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioView.swift in Sources */,
+				LV01A2B3C4D5E6F7A8B9C0D1 /* PresetListViewModel.swift in Sources */,
+				PL01A2B3C4D5E6F7A8B9C0D1 /* PresetListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
