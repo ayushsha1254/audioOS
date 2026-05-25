@@ -1,11 +1,21 @@
+// The 7 mock-based tests below verify that the PresetRepository contract
+// behaves correctly (filtering, upsert semantics, error propagation). This is
+// useful for the ViewModel layer, which depends only on the protocol, not the
+// concrete implementation.
+//
+// The smoke test at the bottom ("test_presetService_conformsToRepository")
+// verifies that PresetService itself satisfies PresetRepository at compile time
+// and can be constructed without crashing — without making live network calls.
+
 import XCTest
+import Supabase
 @testable import AaikyamPresetStudio
 
 // MARK: - Mock
 
 final class MockPresetRepository: PresetRepository {
     var savedPresets: [PresetModel] = []
-    var shouldThrow   = false
+    var shouldThrow = false
 
     func loadAll(artistId: UUID) async throws -> [PresetModel] {
         if shouldThrow { throw URLError(.notConnectedToInternet) }
@@ -33,6 +43,7 @@ final class PresetServiceTests: XCTestCase {
     let artistId = UUID()
 
     override func setUp() {
+        super.setUp()
         mock = MockPresetRepository()
     }
 
@@ -108,5 +119,21 @@ final class PresetServiceTests: XCTestCase {
         } catch {
             XCTAssertTrue(error is URLError)
         }
+    }
+
+    // MARK: - PresetService conformance smoke test
+
+    /// Verifies that PresetService satisfies the PresetRepository protocol at
+    /// compile time and can be constructed without crashing. No live network
+    /// calls are made; the placeholder credentials are intentionally invalid.
+    func test_presetService_conformsToRepository() {
+        let client = SupabaseClient(
+            supabaseURL: URL(string: "https://test.supabase.co")!,
+            supabaseKey: "dummy-anon-key-for-compile-time-check"
+        )
+        let service = PresetService(supabase: client)
+        // Assign to protocol type to confirm conformance at compile time.
+        let _: PresetRepository = service
+        XCTAssertTrue(true, "PresetService constructs and conforms to PresetRepository")
     }
 }
