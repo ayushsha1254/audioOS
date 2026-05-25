@@ -22,6 +22,8 @@
 		E7D1C91635E6D6165D580AE4 /* AaikyamPresetStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1A90F711C41CDB2544C4B /* AaikyamPresetStudioApp.swift */; };
 		F6A7B8C9D0E1F2A3B4C5D6E8 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A7B8C9D0E1F2A3B4C5D6E7 /* ColorExtensions.swift */; };
 		G7B8C9D0E1F2A3B4C5D6E7F9 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = G7B8C9D0E1F2A3B4C5D6E7F8 /* WaveformView.swift */; };
+		PS001A2B3C4D5E6F7A8B9C0D1 /* PresetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PS001A2B3C4D5E6F7A8B9C0D2 /* PresetService.swift */; };
+		PT001A2B3C4D5E6F7A8B9C0D1 /* PresetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = PT001A2B3C4D5E6F7A8B9C0D2 /* PresetServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,10 @@
 		E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtensions.swift; sourceTree = "<group>"; };
 		F6A7B8C9D0E1F2A3B4C5D6E7 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		G7B8C9D0E1F2A3B4C5D6E7F8 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		PS001A2B3C4D5E6F7A8B9C0D2 /* PresetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetService.swift; sourceTree = "<group>"; };
+		PT001A2B3C4D5E6F7A8B9C0D2 /* PresetServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetServiceTests.swift; sourceTree = "<group>"; };
+		XC001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		XE001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Secrets.xcconfig.example; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 				BF398E225CC46BA20EFE2F0F /* AaikyamPresetStudioTests.swift */,
 				B2C3D4E5F6A7B8C9D0E1F2A4 /* PresetModelTests.swift */,
 				D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */,
+				PT001A2B3C4D5E6F7A8B9C0D2 /* PresetServiceTests.swift */,
 			);
 			path = AaikyamPresetStudioTests;
 			sourceTree = "<group>";
@@ -97,6 +104,8 @@
 			children = (
 				F6A7B8C9D0E1F2A3B4C5D6E7 /* ColorExtensions.swift */,
 				E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */,
+				XC001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig */,
+				XE001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig.example */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -106,6 +115,7 @@
 			children = (
 				H8C9D0E1F2A3B4C5D6E7F8A8 /* AudioEngineManager.swift */,
 				C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */,
+				PS001A2B3C4D5E6F7A8B9C0D2 /* PresetService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -254,6 +264,7 @@
 				4C76AF512316F0A98C8395C7 /* AaikyamPresetStudioTests.swift in Sources */,
 				B2C3D4E5F6A7B8C9D0E1F2A3 /* PresetModelTests.swift in Sources */,
 				D4E5F6A7B8C9D0E1F2A3B4C5 /* PresetParameterMapperTests.swift in Sources */,
+				PT001A2B3C4D5E6F7A8B9C0D1 /* PresetServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +279,7 @@
 				E5F6A7B8C9D0E1F2A3B4C5D6 /* NumericExtensions.swift in Sources */,
 				F6A7B8C9D0E1F2A3B4C5D6E8 /* ColorExtensions.swift in Sources */,
 				G7B8C9D0E1F2A3B4C5D6E7F9 /* WaveformView.swift in Sources */,
+				PS001A2B3C4D5E6F7A8B9C0D1 /* PresetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,12 +305,13 @@
 		};
 		86C737DAA0BDD3063E6D878D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = XC001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = AaikyamPresetStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaikyam.presetstudio;
-				SUPABASE_ANON_KEY = "placeholder-key";
-				SUPABASE_URL = "https://placeholder.supabase.co";
+				SUPABASE_ANON_KEY = "$(SUPABASE_ANON_KEY)";
+				SUPABASE_URL = "$(SUPABASE_URL)";
 				SWIFT_VERSION = 5.9;
 			};
 			name = Debug;
@@ -313,12 +326,13 @@
 		};
 		AED368B18FCCB02707DF865E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = XC001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = AaikyamPresetStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaikyam.presetstudio;
-				SUPABASE_ANON_KEY = "placeholder-key";
-				SUPABASE_URL = "https://placeholder.supabase.co";
+				SUPABASE_ANON_KEY = "$(SUPABASE_ANON_KEY)";
+				SUPABASE_URL = "$(SUPABASE_URL)";
 				SWIFT_VERSION = 5.9;
 			};
 			name = Release;

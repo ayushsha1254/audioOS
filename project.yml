@@ -6,6 +6,10 @@ options:
   defaultConfig: Debug
   xcodeVersion: "16.0"
 
+configs:
+  Debug:   AaikyamPresetStudio/Utilities/Secrets.xcconfig
+  Release: AaikyamPresetStudio/Utilities/Secrets.xcconfig
+
 packages:
   Supabase:
     url: https://github.com/supabase/supabase-swift
