@@ -24,6 +24,7 @@
 		G7B8C9D0E1F2A3B4C5D6E7F9 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = G7B8C9D0E1F2A3B4C5D6E7F8 /* WaveformView.swift */; };
 		PS001A2B3C4D5E6F7A8B9C0D1 /* PresetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PS001A2B3C4D5E6F7A8B9C0D2 /* PresetService.swift */; };
 		PT001A2B3C4D5E6F7A8B9C0D1 /* PresetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = PT001A2B3C4D5E6F7A8B9C0D2 /* PresetServiceTests.swift */; };
+		VM01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		PT001A2B3C4D5E6F7A8B9C0D2 /* PresetServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetServiceTests.swift; sourceTree = "<group>"; };
 		XC001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		XE001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Secrets.xcconfig.example; sourceTree = "<group>"; };
+		VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStudioViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		79B01B557FC4898477FDF159 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				F6A7B8C9D0E1F2A3B4C5D6E8 /* ColorExtensions.swift in Sources */,
 				G7B8C9D0E1F2A3B4C5D6E7F9 /* WaveformView.swift in Sources */,
 				PS001A2B3C4D5E6F7A8B9C0D1 /* PresetService.swift in Sources */,
+				VM01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
