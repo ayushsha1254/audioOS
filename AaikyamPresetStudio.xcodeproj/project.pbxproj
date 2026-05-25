@@ -19,6 +19,8 @@
 		D4E5F6A7B8C9D0E1F2A3B4C5 /* PresetParameterMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */; };
 		E5F6A7B8C9D0E1F2A3B4C5D6 /* NumericExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */; };
 		E7D1C91635E6D6165D580AE4 /* AaikyamPresetStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1A90F711C41CDB2544C4B /* AaikyamPresetStudioApp.swift */; };
+		F6A7B8C9D0E1F2A3B4C5D6E8 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A7B8C9D0E1F2A3B4C5D6E7 /* ColorExtensions.swift */; };
+		G7B8C9D0E1F2A3B4C5D6E7F9 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = G7B8C9D0E1F2A3B4C5D6E7F8 /* WaveformView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,19 +39,17 @@
 		6ADBC473FC11DA88382C5D17 /* JetBrainsMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-Regular.ttf"; sourceTree = "<group>"; };
 		6F5D1DABB14D64368796987F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		75A26F6A10FD0BDC24E7C879 /* Syne-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Syne-Bold.ttf"; sourceTree = "<group>"; };
-		7F4C53191465CBDA2F121960 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
-		7F8D3CF7B6C64EB77C2741C5 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		8E668828FF14A25D6EF3EDDB /* AaikyamPresetStudio.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AaikyamPresetStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		911693D4D5CF682A2CA83E19 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		9AC4DFE4A42466A112BCEDAB /* AaikyamPresetStudioTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AaikyamPresetStudioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DE87E47F060620A42908005 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		A1B2C3D4E5F6A7B8C9D0E1F3 /* PresetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetModel.swift; sourceTree = "<group>"; };
 		B2C3D4E5F6A7B8C9D0E1F2A4 /* PresetModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetModelTests.swift; sourceTree = "<group>"; };
 		C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapper.swift; sourceTree = "<group>"; };
 		D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapperTests.swift; sourceTree = "<group>"; };
 		BF398E225CC46BA20EFE2F0F /* AaikyamPresetStudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AaikyamPresetStudioTests.swift; sourceTree = "<group>"; };
 		E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtensions.swift; sourceTree = "<group>"; };
-		E9D152CE890D8993059ECF6B /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		F6A7B8C9D0E1F2A3B4C5D6E7 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		G7B8C9D0E1F2A3B4C5D6E7F8 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,6 @@
 		1CDE49D389CA6854B2C2D54A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7F4C53191465CBDA2F121960 /* .gitkeep */,
 				A1B2C3D4E5F6A7B8C9D0E1F3 /* PresetModel.swift */,
 			);
 			path = Models;
@@ -76,7 +75,7 @@
 		2DC79E6AECE5D27A57C58512 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E9D152CE890D8993059ECF6B /* .gitkeep */,
+				G7B8C9D0E1F2A3B4C5D6E7F8 /* WaveformView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,6 +93,7 @@
 		5FD1D3CDB1E97C2E3AB21EE1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F6A7B8C9D0E1F2A3B4C5D6E7 /* ColorExtensions.swift */,
 				E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */,
 			);
 			path = Utilities;
@@ -102,7 +102,6 @@
 		6DA724C8E2EB3B9531BC7AE5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7F8D3CF7B6C64EB77C2741C5 /* .gitkeep */,
 				C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */,
 			);
 			path = Services;
@@ -111,7 +110,6 @@
 		79B01B557FC4898477FDF159 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				9DE87E47F060620A42908005 /* .gitkeep */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -264,6 +262,8 @@
 				A1B2C3D4E5F6A7B8C9D0E1F2 /* PresetModel.swift in Sources */,
 				C3D4E5F6A7B8C9D0E1F2A3B4 /* PresetParameterMapper.swift in Sources */,
 				E5F6A7B8C9D0E1F2A3B4C5D6 /* NumericExtensions.swift in Sources */,
+				F6A7B8C9D0E1F2A3B4C5D6E8 /* ColorExtensions.swift in Sources */,
+				G7B8C9D0E1F2A3B4C5D6E7F9 /* WaveformView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
