@@ -28,6 +28,7 @@
 		PV01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */; };
 		LV01A2B3C4D5E6F7A8B9C0D1 /* PresetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = LV01A2B3C4D5E6F7A8B9C0D2 /* PresetListViewModel.swift */; };
 		PL01A2B3C4D5E6F7A8B9C0D1 /* PresetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PL01A2B3C4D5E6F7A8B9C0D2 /* PresetListView.swift */; };
+		LI01A2B3C4D5E6F7A8B9C0D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LI01A2B3C4D5E6F7A8B9C0D2 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStudioView.swift; sourceTree = "<group>"; };
 		LV01A2B3C4D5E6F7A8B9C0D2 /* PresetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetListViewModel.swift; sourceTree = "<group>"; };
 		PL01A2B3C4D5E6F7A8B9C0D2 /* PresetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetListView.swift; sourceTree = "<group>"; };
+		LI01A2B3C4D5E6F7A8B9C0D2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				G7B8C9D0E1F2A3B4C5D6E7F8 /* WaveformView.swift */,
 				PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */,
 				PL01A2B3C4D5E6F7A8B9C0D2 /* PresetListView.swift */,
+				LI01A2B3C4D5E6F7A8B9C0D2 /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				PV01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioView.swift in Sources */,
 				LV01A2B3C4D5E6F7A8B9C0D1 /* PresetListViewModel.swift in Sources */,
 				PL01A2B3C4D5E6F7A8B9C0D1 /* PresetListView.swift in Sources */,
+				LI01A2B3C4D5E6F7A8B9C0D1 /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
