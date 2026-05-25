@@ -330,6 +330,7 @@
 				INFOPLIST_FILE = AaikyamPresetStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaikyam.presetstudio;
+				PRODUCT_NAME = AaikyamPresetStudio;
 				SUPABASE_ANON_KEY = "$(SUPABASE_ANON_KEY)";
 				SUPABASE_URL = "$(SUPABASE_URL)";
 				SWIFT_VERSION = 5.9;
@@ -339,7 +340,9 @@
 		8D862D3951EE22D12A4FF687 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -351,6 +354,7 @@
 				INFOPLIST_FILE = AaikyamPresetStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaikyam.presetstudio;
+				PRODUCT_NAME = AaikyamPresetStudio;
 				SUPABASE_ANON_KEY = "$(SUPABASE_ANON_KEY)";
 				SUPABASE_URL = "$(SUPABASE_URL)";
 				SWIFT_VERSION = 5.9;
@@ -360,7 +364,9 @@
 		E7EF65F6003D85690ED68778 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Release;

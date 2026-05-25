@@ -1,5 +1,6 @@
 import Foundation
 import AVFoundation
+import AudioToolbox
 
 // MARK: - State
 
@@ -48,7 +49,18 @@ final class AudioEngineManager: ObservableObject {
     private let engine       = AVAudioEngine()
     private let playerNode   = AVAudioPlayerNode()
     private let eqNode       = AVAudioUnitEQ(numberOfBands: 5)
-    private let compNode     = AVAudioUnitDynamicsProcessor()
+    // AVAudioUnitDynamicsProcessor was removed in iOS 26; use AVAudioUnitEffect
+    // with kAudioUnitSubType_DynamicsProcessor from AudioToolbox instead.
+    private let compNode: AVAudioUnitEffect = {
+        let desc = AudioComponentDescription(
+            componentType:         kAudioUnitType_Effect,
+            componentSubType:      kAudioUnitSubType_DynamicsProcessor,
+            componentManufacturer: kAudioUnitManufacturer_Apple,
+            componentFlags:        0,
+            componentFlagsMask:    0
+        )
+        return AVAudioUnitEffect(audioComponentDescription: desc)
+    }()
     private let reverbNode   = AVAudioUnitReverb()
     private let delayNode    = AVAudioUnitDelay()
 
@@ -324,13 +336,14 @@ final class AudioEngineManager: ObservableObject {
         eqNode.bands[4].frequency = params.eqHighFreq
         eqNode.bands[4].gain      = params.eqHighGain
 
-        // Compressor
-        // AVAudioUnitDynamicsProcessor: headRoom approximates ratio (higher ratio → tighter = lower headRoom)
-        compNode.threshold   = params.compThreshold
-        compNode.headRoom    = max(0.1, 40.0 / params.compRatio)   // headRoom = 40/ratio
-        compNode.attackTime  = TimeInterval(params.compAttack  / 1000.0)  // ms → s
-        compNode.releaseTime = TimeInterval(params.compRelease / 1000.0)
-        compNode.masterGain  = params.compMakeup
+        // Compressor — set via AudioUnitSetParameter (AVAudioUnitDynamicsProcessor removed in iOS 26)
+        // headRoom approximates ratio: higher ratio → tighter compression → lower headRoom
+        let au = compNode.audioUnit
+        AudioUnitSetParameter(au, kDynamicsProcessorParam_Threshold,   kAudioUnitScope_Global, 0, params.compThreshold, 0)
+        AudioUnitSetParameter(au, kDynamicsProcessorParam_HeadRoom,    kAudioUnitScope_Global, 0, max(0.1, 40.0 / params.compRatio), 0)
+        AudioUnitSetParameter(au, kDynamicsProcessorParam_AttackTime,  kAudioUnitScope_Global, 0, params.compAttack  / 1000.0, 0)
+        AudioUnitSetParameter(au, kDynamicsProcessorParam_ReleaseTime, kAudioUnitScope_Global, 0, params.compRelease / 1000.0, 0)
+        AudioUnitSetParameter(au, kDynamicsProcessorParam_OverallGain, kAudioUnitScope_Global, 0, params.compMakeup, 0)
 
         // Reverb — use reverbPresetIndex (computed Int, clamped 0–12)
         if let rvPreset = AVAudioUnitReverbPreset(rawValue: params.reverbPresetIndex) {
