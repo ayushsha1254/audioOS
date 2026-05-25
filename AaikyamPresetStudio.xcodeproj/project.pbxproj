@@ -16,6 +16,7 @@
 		A1B2C3D4E5F6A7B8C9D0E1F2 /* PresetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F3 /* PresetModel.swift */; };
 		B2C3D4E5F6A7B8C9D0E1F2A3 /* PresetModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F6A7B8C9D0E1F2A4 /* PresetModelTests.swift */; };
 		C3D4E5F6A7B8C9D0E1F2A3B4 /* PresetParameterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */; };
+		H8C9D0E1F2A3B4C5D6E7F8A9 /* AudioEngineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = H8C9D0E1F2A3B4C5D6E7F8A8 /* AudioEngineManager.swift */; };
 		D4E5F6A7B8C9D0E1F2A3B4C5 /* PresetParameterMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */; };
 		E5F6A7B8C9D0E1F2A3B4C5D6 /* NumericExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */; };
 		E7D1C91635E6D6165D580AE4 /* AaikyamPresetStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1A90F711C41CDB2544C4B /* AaikyamPresetStudioApp.swift */; };
@@ -45,6 +46,7 @@
 		A1B2C3D4E5F6A7B8C9D0E1F3 /* PresetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetModel.swift; sourceTree = "<group>"; };
 		B2C3D4E5F6A7B8C9D0E1F2A4 /* PresetModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetModelTests.swift; sourceTree = "<group>"; };
 		C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapper.swift; sourceTree = "<group>"; };
+		H8C9D0E1F2A3B4C5D6E7F8A8 /* AudioEngineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngineManager.swift; sourceTree = "<group>"; };
 		D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapperTests.swift; sourceTree = "<group>"; };
 		BF398E225CC46BA20EFE2F0F /* AaikyamPresetStudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AaikyamPresetStudioTests.swift; sourceTree = "<group>"; };
 		E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtensions.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		6DA724C8E2EB3B9531BC7AE5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				H8C9D0E1F2A3B4C5D6E7F8A8 /* AudioEngineManager.swift */,
 				C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */,
 			);
 			path = Services;
@@ -261,6 +264,7 @@
 				E7D1C91635E6D6165D580AE4 /* AaikyamPresetStudioApp.swift in Sources */,
 				A1B2C3D4E5F6A7B8C9D0E1F2 /* PresetModel.swift in Sources */,
 				C3D4E5F6A7B8C9D0E1F2A3B4 /* PresetParameterMapper.swift in Sources */,
+				H8C9D0E1F2A3B4C5D6E7F8A9 /* AudioEngineManager.swift in Sources */,
 				E5F6A7B8C9D0E1F2A3B4C5D6 /* NumericExtensions.swift in Sources */,
 				F6A7B8C9D0E1F2A3B4C5D6E8 /* ColorExtensions.swift in Sources */,
 				G7B8C9D0E1F2A3B4C5D6E7F9 /* WaveformView.swift in Sources */,
