@@ -39,7 +39,16 @@ struct PresetStudioView: View {
         } message: {
             Text("Give this preset a name so you can find it on the venue box.")
         }
-        // Error alert
+        // Recording error alert
+        .alert("Recording Failed", isPresented: Binding(
+            get: { vm.recordError != nil },
+            set: { if !$0 { vm.recordError = nil } }
+        )) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(vm.recordError ?? "")
+        }
+        // Save error alert
         .alert("Save Failed", isPresented: Binding(
             get: { vm.saveError != nil },
             set: { if !$0 { vm.saveError = nil } }

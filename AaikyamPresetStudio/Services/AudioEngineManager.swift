@@ -102,12 +102,13 @@ final class AudioEngineManager: ObservableObject {
         engine.attach(delayNode)
 
         // Player → EQ → Compressor → Reverb → Delay → MainMixer
-        let fmt = engine.mainMixerNode.outputFormat(forBus: 0)
-        engine.connect(playerNode,  to: eqNode,     format: fmt)
-        engine.connect(eqNode,      to: compNode,   format: fmt)
-        engine.connect(compNode,    to: reverbNode, format: fmt)
-        engine.connect(reverbNode,  to: delayNode,  format: fmt)
-        engine.connect(delayNode,   to: engine.mainMixerNode, format: fmt)
+        // Use nil format: AVAudioEngine negotiates sample rate automatically after
+        // the AVAudioSession is configured (avoids init-time vs recording-time mismatch).
+        engine.connect(playerNode,  to: eqNode,     format: nil)
+        engine.connect(eqNode,      to: compNode,   format: nil)
+        engine.connect(compNode,    to: reverbNode, format: nil)
+        engine.connect(reverbNode,  to: delayNode,  format: nil)
+        engine.connect(delayNode,   to: engine.mainMixerNode, format: nil)
 
         configureEQDefaults()
     }
@@ -197,14 +198,37 @@ final class AudioEngineManager: ObservableObject {
         do { try configureSession() }
         catch { throw AudioEngineError.sessionSetupFailed(error) }
 
+        // Defensively remove any leftover tap from a previous (possibly failed) session.
+        engine.inputNode.removeTap(onBus: 0)
+
+        // Stop the engine if still running from a previous playback session.
+        if engine.isRunning { engine.stop() }
+
         let url = FileManager.default.temporaryDirectory
             .appendingPathComponent("aaikyam_clip.caf")
 
+        // After configureSession(), the input node reports the hardware format correctly.
         let inputFormat = engine.inputNode.outputFormat(forBus: 0)
-        recordedFile    = try AVAudioFile(forWriting: url, settings: inputFormat.settings)
+
+        // Validate format — fall back to 44100 Hz mono PCM if sample rate is 0
+        let fileSettings: [String: Any]
+        if inputFormat.sampleRate > 0 {
+            fileSettings = inputFormat.settings
+        } else {
+            fileSettings = [
+                AVFormatIDKey: kAudioFormatLinearPCM,
+                AVSampleRateKey: 44100.0,
+                AVNumberOfChannelsKey: 1,
+                AVLinearPCMBitDepthKey: 16,
+                AVLinearPCMIsFloatKey: false,
+                AVLinearPCMIsBigEndianKey: false
+            ]
+        }
+        recordedFile    = try AVAudioFile(forWriting: url, settings: fileSettings)
         recordedFileURL = url
 
-        engine.inputNode.installTap(onBus: 0, bufferSize: 4096, format: inputFormat) { [weak self] buffer, _ in
+        // Use nil format so AVAudioEngine matches the tap to the node's native format.
+        engine.inputNode.installTap(onBus: 0, bufferSize: 4096, format: nil) { [weak self] buffer, _ in
             guard let self else { return }
             try? self.recordedFile?.write(from: buffer)
             self.extractWaveformSample(from: buffer)

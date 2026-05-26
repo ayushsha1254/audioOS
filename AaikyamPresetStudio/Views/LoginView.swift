@@ -91,7 +91,10 @@ struct LoginView: View {
         errorMessage = nil
         do {
             let session = try await supabase.auth.signIn(email: email, password: password)
-            onAuthenticated(session.user.id)
+            // sound_presets.artist_id references artist_profiles.id (NOT auth.uid()).
+            // Must look up the correct UUID or every INSERT will fail RLS.
+            let artistProfileId = try await fetchArtistProfileId(for: session.user.id)
+            onAuthenticated(artistProfileId)
         } catch {
             errorMessage = error.localizedDescription
         }

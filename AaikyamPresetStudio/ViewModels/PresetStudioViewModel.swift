@@ -11,16 +11,18 @@ final class PresetStudioViewModel: ObservableObject {
     @Published var isAdvancedMode:  Bool = false
     @Published var isSaving:        Bool = false
     @Published var saveError:       String?
+    @Published var recordError:     String?
     @Published var showNamePrompt:  Bool = false
     @Published var presetName:      String = ""
     @Published var didSave:         Bool = false
 
-    // Forwarded from AudioEngineManager
-    var engineState:      AudioEngineState { audio.state }
-    var waveformSamples:  [Float]  { audio.waveformSamples }
-    var recordingProgress: Float   { audio.recordingProgress }
-    var playbackProgress:  Float   { audio.playbackProgress }
-    var isWetMode:         Bool    { audio.isWetMode }
+    // Forwarded from AudioEngineManager — NOT computed; updated via Combine subscription
+    // so the view re-renders whenever audio state actually changes.
+    @Published var engineState:       AudioEngineState = .idle
+    @Published var waveformSamples:   [Float]          = []
+    @Published var recordingProgress: Float            = 0.0
+    @Published var playbackProgress:  Float            = 0.0
+    @Published var isWetMode:         Bool             = true
 
     // MARK: - Dependencies
 
@@ -28,6 +30,7 @@ final class PresetStudioViewModel: ObservableObject {
     private let service:      PresetRepository
     private let artistId:     UUID
     private let isNewPreset:  Bool
+    private var cancellables  = Set<AnyCancellable>()
 
     // MARK: - Init
 
@@ -49,6 +52,21 @@ final class PresetStudioViewModel: ObservableObject {
         self.preset      = p
         self.sliders     = PresetParameterMapper.slidersFromParameters(p.parameters)
         self.presetName  = p.name
+
+        // Seed initial values
+        self.engineState       = audio.state
+        self.waveformSamples   = audio.waveformSamples
+        self.recordingProgress = audio.recordingProgress
+        self.playbackProgress  = audio.playbackProgress
+        self.isWetMode         = audio.isWetMode
+
+        // Forward every AudioEngineManager change into this ViewModel so SwiftUI
+        // re-renders the view when audio state changes.
+        audio.$state             .assign(to: &$engineState)
+        audio.$waveformSamples   .assign(to: &$waveformSamples)
+        audio.$recordingProgress .assign(to: &$recordingProgress)
+        audio.$playbackProgress  .assign(to: &$playbackProgress)
+        audio.$isWetMode         .assign(to: &$isWetMode)
     }
 
     // MARK: - Starting presets / templates
@@ -86,8 +104,9 @@ final class PresetStudioViewModel: ObservableObject {
     func tapRecord() async {
         switch audio.state {
         case .idle, .recorded:
+            recordError = nil
             do { try await audio.startRecording() }
-            catch { saveError = error.localizedDescription }
+            catch { recordError = error.localizedDescription }
         case .recording:
             audio.stopRecording()
         case .playing:

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,19 +16,19 @@
 		A1B2C3D4E5F6A7B8C9D0E1F2 /* PresetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F3 /* PresetModel.swift */; };
 		B2C3D4E5F6A7B8C9D0E1F2A3 /* PresetModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F6A7B8C9D0E1F2A4 /* PresetModelTests.swift */; };
 		C3D4E5F6A7B8C9D0E1F2A3B4 /* PresetParameterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */; };
-		H8C9D0E1F2A3B4C5D6E7F8A9 /* AudioEngineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = H8C9D0E1F2A3B4C5D6E7F8A8 /* AudioEngineManager.swift */; };
 		D4E5F6A7B8C9D0E1F2A3B4C5 /* PresetParameterMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */; };
 		E5F6A7B8C9D0E1F2A3B4C5D6 /* NumericExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */; };
 		E7D1C91635E6D6165D580AE4 /* AaikyamPresetStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1A90F711C41CDB2544C4B /* AaikyamPresetStudioApp.swift */; };
 		F6A7B8C9D0E1F2A3B4C5D6E8 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A7B8C9D0E1F2A3B4C5D6E7 /* ColorExtensions.swift */; };
 		G7B8C9D0E1F2A3B4C5D6E7F9 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = G7B8C9D0E1F2A3B4C5D6E7F8 /* WaveformView.swift */; };
-		PS001A2B3C4D5E6F7A8B9C0D1 /* PresetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PS001A2B3C4D5E6F7A8B9C0D2 /* PresetService.swift */; };
-		PT001A2B3C4D5E6F7A8B9C0D1 /* PresetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = PT001A2B3C4D5E6F7A8B9C0D2 /* PresetServiceTests.swift */; };
-		VM01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */; };
-		PV01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */; };
+		H8C9D0E1F2A3B4C5D6E7F8A9 /* AudioEngineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = H8C9D0E1F2A3B4C5D6E7F8A8 /* AudioEngineManager.swift */; };
+		LI01A2B3C4D5E6F7A8B9C0D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LI01A2B3C4D5E6F7A8B9C0D2 /* LoginView.swift */; };
 		LV01A2B3C4D5E6F7A8B9C0D1 /* PresetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = LV01A2B3C4D5E6F7A8B9C0D2 /* PresetListViewModel.swift */; };
 		PL01A2B3C4D5E6F7A8B9C0D1 /* PresetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PL01A2B3C4D5E6F7A8B9C0D2 /* PresetListView.swift */; };
-		LI01A2B3C4D5E6F7A8B9C0D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LI01A2B3C4D5E6F7A8B9C0D2 /* LoginView.swift */; };
+		PS001A2B3C4D5E6F7A8B9C0D1 /* PresetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PS001A2B3C4D5E6F7A8B9C0D2 /* PresetService.swift */; };
+		PT001A2B3C4D5E6F7A8B9C0D1 /* PresetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = PT001A2B3C4D5E6F7A8B9C0D2 /* PresetServiceTests.swift */; };
+		PV01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */; };
+		VM01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,31 +43,31 @@
 
 /* Begin PBXFileReference section */
 		37A1A90F711C41CDB2544C4B /* AaikyamPresetStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AaikyamPresetStudioApp.swift; sourceTree = "<group>"; };
-		5844F5748E38A2F3C66A7BF5 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		5844F5748E38A2F3C66A7BF5 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		6ADBC473FC11DA88382C5D17 /* JetBrainsMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-Regular.ttf"; sourceTree = "<group>"; };
 		6F5D1DABB14D64368796987F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		75A26F6A10FD0BDC24E7C879 /* Syne-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Syne-Bold.ttf"; sourceTree = "<group>"; };
-		8E668828FF14A25D6EF3EDDB /* AaikyamPresetStudio.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AaikyamPresetStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		911693D4D5CF682A2CA83E19 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
-		9AC4DFE4A42466A112BCEDAB /* AaikyamPresetStudioTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AaikyamPresetStudioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A26F6A10FD0BDC24E7C879 /* Syne-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Syne-Bold.ttf"; sourceTree = "<group>"; };
+		8E668828FF14A25D6EF3EDDB /* AaikyamPresetStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AaikyamPresetStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		911693D4D5CF682A2CA83E19 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		9AC4DFE4A42466A112BCEDAB /* AaikyamPresetStudioTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = text; name = AaikyamPresetStudioTests.xctest; path = .xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B2C3D4E5F6A7B8C9D0E1F3 /* PresetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetModel.swift; sourceTree = "<group>"; };
 		B2C3D4E5F6A7B8C9D0E1F2A4 /* PresetModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetModelTests.swift; sourceTree = "<group>"; };
-		C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapper.swift; sourceTree = "<group>"; };
-		H8C9D0E1F2A3B4C5D6E7F8A8 /* AudioEngineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngineManager.swift; sourceTree = "<group>"; };
-		D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapperTests.swift; sourceTree = "<group>"; };
 		BF398E225CC46BA20EFE2F0F /* AaikyamPresetStudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AaikyamPresetStudioTests.swift; sourceTree = "<group>"; };
+		C3D4E5F6A7B8C9D0E1F2A3B5 /* PresetParameterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapper.swift; sourceTree = "<group>"; };
+		D4E5F6A7B8C9D0E1F2A3B4C6 /* PresetParameterMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetParameterMapperTests.swift; sourceTree = "<group>"; };
 		E5F6A7B8C9D0E1F2A3B4C5D7 /* NumericExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtensions.swift; sourceTree = "<group>"; };
 		F6A7B8C9D0E1F2A3B4C5D6E7 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		G7B8C9D0E1F2A3B4C5D6E7F8 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
-		PS001A2B3C4D5E6F7A8B9C0D2 /* PresetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetService.swift; sourceTree = "<group>"; };
-		PT001A2B3C4D5E6F7A8B9C0D2 /* PresetServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetServiceTests.swift; sourceTree = "<group>"; };
-		XC001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
-		XE001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Secrets.xcconfig.example; sourceTree = "<group>"; };
-		VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStudioViewModel.swift; sourceTree = "<group>"; };
-		PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStudioView.swift; sourceTree = "<group>"; };
+		H8C9D0E1F2A3B4C5D6E7F8A8 /* AudioEngineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngineManager.swift; sourceTree = "<group>"; };
+		LI01A2B3C4D5E6F7A8B9C0D2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		LV01A2B3C4D5E6F7A8B9C0D2 /* PresetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetListViewModel.swift; sourceTree = "<group>"; };
 		PL01A2B3C4D5E6F7A8B9C0D2 /* PresetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetListView.swift; sourceTree = "<group>"; };
-		LI01A2B3C4D5E6F7A8B9C0D2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		PS001A2B3C4D5E6F7A8B9C0D2 /* PresetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetService.swift; sourceTree = "<group>"; };
+		PT001A2B3C4D5E6F7A8B9C0D2 /* PresetServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetServiceTests.swift; sourceTree = "<group>"; };
+		PV01A2B3C4D5E6F7A8B9C0D2 /* PresetStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStudioView.swift; sourceTree = "<group>"; };
+		VM01A2B3C4D5E6F7A8B9C0D1 /* PresetStudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStudioViewModel.swift; sourceTree = "<group>"; };
+		XC001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		XE001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Secrets.xcconfig.example; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,8 +233,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 97C734A0BA1DBBD6A00492E7 /* Build configuration list for PBXProject "AaikyamPresetStudio" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -327,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = XC001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 73X97RY3KV;
 				INFOPLIST_FILE = AaikyamPresetStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaikyam.presetstudio;
@@ -351,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = XC001A2B3C4D5E6F7A8B9C0D2 /* Secrets.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 73X97RY3KV;
 				INFOPLIST_FILE = AaikyamPresetStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaikyam.presetstudio;
